@@ -1,0 +1,9 @@
+class Solution {
+public:
+    vector<int> intersection(vector<int>& a, vector<int>& b) {
+        unordered_set<int> s(a.begin(), a.end()), res;
+        for (int x : b)
+            if (s.count(x)) res.insert(x);
+        return vector<int>(res.begin(), res.end());
+    }
+};
